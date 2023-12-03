@@ -25,7 +25,7 @@
                     @click="fullScreenVideo(index)"
                     class="object-cover h-[100%] hover:brightness-125 cursor-pointer" 
                     :class="
-                        currentSlide !== index ? 'border-4 border-transparent' : 'border-4 border-white',
+                        !(carouselY === y && carouselX === index) ? 'border-4 border-transparent' : 'border-4 border-white',
                         currentSlideObject(slide, index)
                     "
                 >
@@ -51,17 +51,19 @@
   import { useMovieStore } from '../stores/movie'
   import { storeToRefs } from 'pinia';
   const useMovie = useMovieStore()
-  const { movie, showFullVideo } = storeToRefs(useMovie)
+  const { movie, showFullVideo, carouselX, carouselY } = storeToRefs(useMovie)
 
   let currentSlide = ref(0)
 
-  const props = defineProps({ category: String, movies: Array })
-  const { movies, category } = toRefs(props)
+  const props = defineProps({ category: String, movies: Array, y: Number})
+  const { movies, category, y} = toRefs(props)
 
   const currentSlideObject = (slide, index) => {
-    if (index === currentSlide.value) {
+    //console.log(carouselX.value === index, carouselX.value, index);
+    // console.log(index, carouselX.value, carouselY.value, y.value)
+    /*if (index === carouselX.value && y.value==carouselY.value) {
         movie.value = slide
-    }
+    }*/
   }
 
   const fullScreenVideo = (index) => {

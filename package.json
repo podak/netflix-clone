@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --target chrome68",
+    "preview": "vite --host 0.0.0.0 preview"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

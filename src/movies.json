@@ -21,6 +21,16 @@
             }
         },
         { 
+            "name": "Typical Irenekind",
+            "description": "This documentary explores all the behaviours that distinguish Irene Pivetta, focusing on his 20s",
+            "year": "2013",
+            "genre": {
+                "one": "Documentary",
+                "two": "Adventure",
+                "three": "Action"
+            }
+        },
+        { 
             "name": "Avatar The Way of Water",
             "description": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
             "year": "2022",

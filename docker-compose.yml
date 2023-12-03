@@ -1,0 +1,12 @@
+version: '3'
+services:
+    server:
+        build: '.'
+        working_dir: '/app'
+        env_file: '.env'
+        command: ['dumb-init', 'npm', 'start']
+        volumes:
+            - './:/app'
+        ports:
+            - '8080:8080'
+            - '4173:4173'
