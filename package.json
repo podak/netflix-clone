@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build --target chrome68",
+    "build": "vite build --target chrome53",
     "preview": "vite --host 0.0.0.0 preview"
   },
   "dependencies": {
